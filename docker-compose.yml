@@ -6,7 +6,7 @@ services:
     volumes:
       - /opt/mysql_data:/var/lib/mysql
     ports:
-      - "3307:3306"
+      - "3310:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USER=kwetter
@@ -15,9 +15,9 @@ services:
   payara:
     build: .
     ports:
-      - "9999:8080"
-      - "4848:4848"
-      - "8181:8181"
+      - "10002:8080"
+      - "4851:4848"
+      - "8184:8181"
     links:
       - mysql
     depends_on:
